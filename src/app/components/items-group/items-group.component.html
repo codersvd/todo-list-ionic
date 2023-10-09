@@ -1,0 +1,16 @@
+<ion-list *ngIf="groups">
+  <ion-item *ngFor="let group of groups"
+            [routerLink]="'/list/' + group.id"
+            [detail]="true"
+            lines="full"
+  >
+    <div slot="start">
+      <ion-icon [name]="group?.icon" size="large" color="danger"></ion-icon>
+    </div>
+    <ion-label class="ion-text-wrap">
+      <h2>{{ group.name }}<span class="date"></span></h2>
+      <p>{{group.description}}</p>
+    </ion-label>
+  </ion-item>
+
+</ion-list>

@@ -1,0 +1,13 @@
+<app-header [translucent]="true"></app-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <app-header [collapse]="true"></app-header>
+
+  <app-items-group></app-items-group>
+</ion-content>
+<app-bottom></app-bottom>
+
+
