@@ -1,27 +1,27 @@
 import {Component, inject} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {IItemGroup} from "../../interfaces/item-group.interface";
-import {ItemsGroupService} from "../../services/items-group.service";
+import {CategoriesService} from "../../services/categories.service";
 import {Router, RouterLink, RouterOutlet} from "@angular/router";
 import {IonicModule, Platform} from "@ionic/angular";
 
 @Component({
-  selector: 'app-items-group',
+  selector: 'app-categories',
   standalone: true,
   imports: [CommonModule, RouterLink, RouterOutlet, IonicModule],
-  templateUrl: './items-group.component.html',
-  styleUrls: ['./items-group.component.css']
+  templateUrl: './categories.component.html',
+  styleUrls: ['./categories.component.css']
 })
-export class ItemsGroupComponent {
+export class CategoriesComponent {
   public groups: IItemGroup[] = [];
   private platform = inject(Platform);
-  private groupService =  inject(ItemsGroupService);
+  private categoriesService = inject(CategoriesService);
 
   constructor(private router: Router) {
   }
 
   ngOnInit(): void {
-    this.groups = this.groupService.getGroupsData();
+    this.groups = this.categoriesService.getCategoriesData();
   }
 
   isIos() {

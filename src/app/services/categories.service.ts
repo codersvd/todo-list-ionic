@@ -4,8 +4,8 @@ import {IItemGroup} from "../interfaces/item-group.interface";
 @Injectable({
   providedIn: 'root'
 })
-export class ItemsGroupService {
-  getGroupsData(): IItemGroup[] {
+export class CategoriesService {
+  getCategoriesData(): IItemGroup[] {
     return [
       {
         id: 1,
@@ -38,7 +38,7 @@ export class ItemsGroupService {
     ];
   }
 
-  getGroups() {
-    return Promise.resolve(this.getGroupsData());
+  getCategories() {
+    return Promise.resolve(this.getCategoriesData());
   }
 };

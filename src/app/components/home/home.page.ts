@@ -5,7 +5,7 @@ import { MessageComponent } from '../../message/message.component';
 
 import {HeaderComponent} from "../header/header.component";
 import {BottomComponent} from "../bottom/bottom.component";
-import {ItemsGroupComponent} from "../items-group/items-group.component";
+import {CategoriesComponent} from "../categories/categories.component";
 import {AddCategoryButtonComponent} from "../shared/add-category-button/add-category-button.component";
 
 @Component({
@@ -13,7 +13,7 @@ import {AddCategoryButtonComponent} from "../shared/add-category-button/add-cate
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, MessageComponent, HeaderComponent, BottomComponent, ItemsGroupComponent, AddCategoryButtonComponent],
+  imports: [IonicModule, CommonModule, MessageComponent, HeaderComponent, BottomComponent, CategoriesComponent, AddCategoryButtonComponent],
 })
 export class HomePage {
   constructor() {}

@@ -11,7 +11,7 @@ export const routes: Routes = [
   },
   {
     path: 'lists',
-    loadComponent: () => import('./components/items-group/items-group.component').then((m) => m.ItemsGroupComponent),
+    loadComponent: () => import('./components/categories/categories.component').then((m) => m.CategoriesComponent),
     title: 'Groups of items',
   },
   // {
